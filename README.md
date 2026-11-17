@@ -22,7 +22,7 @@ Resistencia de 10kΩ
 Protoboard
 Cables Jumpers (macho- macho y macho- hembra) 
 
-Funcionamiento
+# Funcionamiento
 
 El sistema funciona de forma automática y sin contacto: el Arduino mide continuamente la distancia y mueve la tapa según lo que detecte.
 
@@ -33,12 +33,12 @@ Pulsador de bloqueo: mantiene la tapa cerrada e ignora tanto el sensor como el p
 
 La tapa permanece abierta mientras el sensor siga detectando presencia y se cierra 3 segundos después de que la persona se aleja.
 
-#Conexiones
+# Conexiones
 El Arduino UNO recibe las señales de los pulsadores y del sensor mediante sus entradas digitales. El sensor usa D8 para Trig y D9 para Echo, el pulsador manual está en D2 y el de bloqueo en D3. El servomotor recibe su señal de control por D10.
 El pulsador manual utiliza una resistencia pull-up interna del Arduino, activada por software, y se conecta entre D2 y GND. El pulsador de bloqueo utiliza una resistencia de 10 kΩ en configuración pull-down entre D3 y GND para mantener su estado en LOW mientras no está presionado, y se conecta entre D3 y 5V.
 Si se usa un servomotor grande, este debe alimentarse con una fuente externa de 5-6 V. La conexión entre la fuente externa y el Arduino debe compartir GND para garantizar una referencia común.
 
-#Programación
+# Programación
 
 El código fue desarrollado en Arduino IDE utilizando la librería Servo, incluida por defecto.Algunas de las funciones y elementos utilizados son:
 
